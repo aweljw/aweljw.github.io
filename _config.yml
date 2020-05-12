@@ -1,56 +1,91 @@
 # Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole site, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Woongs Blog
-description: Woongs Blog
-baseurl: # the subpath of your site, e.g. /blog
-url: "https://aweljw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-name: "jiwoong.lee"
+tagline: "<a target='_blank' href='https://en.wikipedia.org/wiki/Yudhishthira'>I'm the eldest.</a> I don't lie, I never will!"
+picture: yudish.jpg #keep a 100x100 image inside images folder.
+brand-color: "#e74c3c"
+permalink: ":title/"
 
-permalink: pretty
-exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
+# Footer
+credits: webjeda #credits on the footer
+version: 2.0
 
-# Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/just-the-docs.png"
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
 
-# Enable or disable the site search
-search_enabled: true
+sass:
+  style: compressed
 
-# Set the search token separator for hyphenated-word search:
-search_tokenizer_separator: /[\s/]+/
+disqus-shortname: webjeda-sample
+analytics: UA-83979019-1
 
-# Enable or disable heading anchors
-heading_anchors: true
+include: [_pages]
 
-# Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2017-2019 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
-
-# Color scheme currently only supports "dark" or nil (default)
-color_scheme: nil
-
-# Google Analytics Tracking (optional)
-# e.g, UA-1234567-89
-ga_tracking: UA-2709176-10
-
-plugins:
-  - jekyll-seo-tag
-
+#compress.html
 compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  startings: []
+  clippings:
+    [
+      html,
+      div,
+      p,
+      ul,
+      td,
+      h1,
+      h2,
+      h3,
+      h4,
+      link,
+      meta,
+      footer,
+      nav,
+      img,
+      header,
+      hr,
+      br,
+      head,
+      style,
+      li,
+      ul,
+      ol,
+      time,
+      main,
+      script,
+      title,
+    ]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
   blanklines: false
   profile: false
+  startings: []
+
+prose:
+  rooturl: ""
+  siteurl: "http://prose.github.io/starter/"
+  relativeLinks: "http://prose.github.io/starter/links.jsonp"
+  media: "images"
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+title: Woongs Blog
+description: Woongs Blog
+baseurl: "/aweljw" # the subpath of your site, e.g. /blog
+url: "https://aweljw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+name: "jiwoong.lee"
+email: hello@email.com
