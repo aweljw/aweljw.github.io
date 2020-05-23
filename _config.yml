@@ -6,60 +6,24 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-tagline: "<a target='_blank' href='https://en.wikipedia.org/wiki/Yudhishthira'>I'm the eldest.</a> I don't lie, I never will!"
-picture: yudish.jpg #keep a 100x100 image inside images folder.
-brand-color: "#e74c3c"
-permalink: ":title/"
-
-# Footer
-credits: webjeda #credits on the footer
-version: 2.0
+title: Woongs Blog
+description: > # this means to ignore newlines until "baseurl:"
+  Woongs Blog
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://aweljw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+name: "jiwoong.lee"
+email: hello@email.com
 
 # Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-highlighter: rouge
+permalink: /:title/
 
-sass:
-  style: compressed
+disqus-shortname: webjeda-demo
 
-disqus-shortname: webjeda-sample
-analytics: UA-83979019-1
-
-include: [_pages]
 
 #compress.html
 compress_html:
-  clippings:
-    [
-      html,
-      div,
-      p,
-      ul,
-      td,
-      h1,
-      h2,
-      h3,
-      h4,
-      link,
-      meta,
-      footer,
-      nav,
-      img,
-      header,
-      hr,
-      br,
-      head,
-      style,
-      li,
-      ul,
-      ol,
-      time,
-      main,
-      script,
-      title,
-    ]
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
   comments: ["<!-- ", " -->"]
   endings: [all]
   ignore:
@@ -68,24 +32,24 @@ compress_html:
   profile: false
   startings: []
 
+sass: 
+  style: compressed
+
+analytics: UA-83979019-1
+
+version: 1.0
+ 
+gems: [jekyll-paginate, jekyll-seo-tag]
+
+  
 prose:
-  rooturl: ""
-  siteurl: "http://prose.github.io/starter/"
-  relativeLinks: "http://prose.github.io/starter/links.jsonp"
-  media: "images"
+  rooturl: ''
+  siteurl: 'http://prose.github.io/starter/'
+  relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+  media: 'images'
   ignore:
     - index.md
     - _config.yml
     - /_layouts
     - /_includes
 
-plugins:
-  - jekyll-paginate
-  - jekyll-seo-tag
-
-title: Woongs Blog
-description: Woongs Blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://aweljw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-name: "jiwoong.lee"
-email: hello@email.com

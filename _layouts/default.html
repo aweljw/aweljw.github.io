@@ -1,28 +1,32 @@
 ---
-layout: compress
 ---
-
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
   <body>
 
-    {% include header.html %}
+        {% include sidebar.html %}
+        <div class="menu-icon"></div>
+      <div class="contents">
+        {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+      <div class="page-content">
+          <div class="wrapper">
+            {{ content }}
+          </div>
       </div>
-    </div>
 
-    {% include footer.html %}
-    
+{% include footer.html %}
+      </div>
+
+{% include 3d-menu.html %}
+
+
 {% if site.analytics %}
-{% include analytics.html %}
+ {% include analytics.html %}
 {% endif %}
- 
-  </body>
 
+</body>
 </html>

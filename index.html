@@ -3,14 +3,18 @@ layout: default
 ---
 
 <div class="home">
-    <ul class="post-list">
-        {% for post in site.posts %}
-            <li class="post-box">
-                <a href="{{ post.url | prepend: site.baseurl }}">
-                    <h2 class="post-link">{{ post.title }}</h2>
-                </a>
-                <p>{{post.content | strip_html | truncate: 150}}</p>
-            </li>
-        {% endfor %}
-    </ul>
+
+  <h2 class="page-heading">Posts</h2>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        
+
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>&nbsp;&#45;&nbsp;<small><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></small>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
