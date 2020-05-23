@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Woongs Blog
+title: Woongs Wiki
 description: > # this means to ignore newlines until "baseurl:"
-  Woongs Blog
+  Woongs Wiki
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://aweljw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 name: "jiwoong.lee"
-email: hello@email.com
+email: aweljw@naver.com
 
 # Build settings
 markdown: kramdown
