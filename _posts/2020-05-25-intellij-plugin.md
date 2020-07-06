@@ -32,6 +32,9 @@ categories: intellij
 
 ## Nyan Progress Bar
 
+## Sql Generator
+https://plugins.jetbrains.com/plugin/7440-sql-generator
+
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
